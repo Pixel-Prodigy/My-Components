@@ -23,9 +23,9 @@ function App() {
   }
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen gap-24 text-white bg-black app-container parent">
+    <div className="flex flex-col items-center justify-center min-h-screen gap-24 text-white bg-black app-container parent pb-[200px]">
       <h1 className="text-5xl font-extrabold cursive">My Components</h1>
-      <h2 className="-mt-20 text-2xl font-bold text-orange-400">Can be yours Too</h2>
+      <h2 className="-mt-20 text-2xl font-bold text-orange-400">Can be y<span className="text-blue-500 ">o</span>urs T<span className="text-blue-400 ">o</span><span className="text-blue-400 ">o</span></h2>
       <div className="flex flex-wrap items-center justify-center gap-24">
         <div className="basis-1/2 sm:basis-1">
           <NavBar variant={vari1}>
@@ -101,7 +101,7 @@ function App() {
           <Join></Join>
           <div><p className="flex items-center text-lg"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="size-8">
   <path strokeLinecap="round" strokeLinejoin="round" d="M18.364 18.364A9 9 0 0 0 5.636 5.636m12.728 12.728A9 9 0 0 1 5.636 5.636m12.728 12.728L5.636 5.636" />
-</svg> No <span className="mx-1 line-through">Variant</span> avalable <span className="ml-2 font-bold text-red-600 underline">FOR NOW</span>
+</svg> No <span className="mx-1 text-orange-400 line-through">Variant</span> avalable <span className="ml-2 font-bold text-red-600 underline">FOR NOW</span>
 </p></div>
           </div>
       </div>
