@@ -16,11 +16,11 @@ function Join() {
   const clickSignup = () => {
     setSignUp(true);
     setLogIn(false);
-    };
-    function close() {
-        setLogIn(false)
-        setSignUp(false)
-    }
+  };
+  function close() {
+    setLogIn(false);
+    setSignUp(false);
+  }
 
   const InnerContent = () => {
     if (logIn) {
@@ -103,7 +103,6 @@ function Join() {
           >
             <motion.svg
               onClick={close}
-              
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"
@@ -166,7 +165,7 @@ function Join() {
   };
 
   return (
-    <div className="relative flex items-center justify-center h-10 w-80">
+    <div className="relative flex items-center justify-center h-10 text-white w-80">
       <motion.button
         animate={{
           width: isOn ? "96px" : "56px",
@@ -174,8 +173,8 @@ function Join() {
           borderRadius: isOn ? "15px" : "none",
           textAlign: isOn ? "center" : "end",
           background: isOn
-            ? "linear-gradient(135deg, #6c7f95, #e0e0e0)"
-            : "linear-gradient(to left, white, #6c7f95)",
+            ? "linear-gradient(45deg, #1e1e1e, #4b4b4b)"
+            : "linear-gradient(45deg, #1e1e1e, #4b4b4b)",
         }}
         transition={{
           type: "spring",
@@ -190,7 +189,7 @@ function Join() {
           animate={{
             x: isOn ? 0 : 20,
             scale: isOn ? 1.6 : 1,
-            color: isOn ? "white" : "black",
+
             opacity: isOn ? 1 : 0.6,
           }}
           transition={{
@@ -203,39 +202,37 @@ function Join() {
       </motion.button>
 
       <motion.div
-  className={`absolute bg-white flex flex-col p-2 items-center gap-1 text-black ${
-    isOn ? "block opacity-100" : "hidden opacity-0"
-  }`}
-  initial={{ width: "20px", height: "20px", bottom: 0, opacity: 0 }}
-  animate={{
-    width: logIn || signUp ? "240px" : "40px",
-    height: logIn || signUp ? "240px" : "40px",
-    bottom: logIn || signUp ? "-250px" : 0,
-    borderRadius: logIn || signUp ? "10px" : "50%",
-      opacity: isOn ? 1 : 0,  
-     scale: isOn? 1: 0.6,
-  }}
-  transition={{
-    type: "spring",
-    stiffness: 250,
-    damping: 20,
-    duration: 0.5,
-    opacity: { duration: 0.3 },  
-  }}
->
-  <InnerContent />
-</motion.div>
+        className={`absolute bg-white flex  flex-col p-2 items-center gap-1 text-black ${
+          isOn ? "block opacity-100" : "hidden opacity-0"
+        }`}
+        initial={{ width: "20px", height: "20px", bottom: 0, opacity: 0 }}
+        animate={{
+          width: logIn || signUp ? "240px" : "40px",
+          height: logIn || signUp ? "240px" : "40px",
+          bottom: logIn || signUp ? "-250px" : 0,
+          borderRadius: logIn || signUp ? "10px" : "50%",
+          opacity: isOn ? 1 : 0,
+          scale: isOn ? 1 : 0.6,
+        }}
+        transition={{
+          type: "spring",
+          stiffness: 250,
+          damping: 20,
+          duration: 0.5,
+          opacity: { duration: 0.3 },
+        }}
+      >
+        <InnerContent />
+      </motion.div>
 
-          <motion.div
-  className={`absolute w-6 h-6 bg-red-500 rounded-full right-[110px] cursor-pointer`}
-  onClick={() => setIsOn(false)}
-  initial={{ scale: 0 }}
-  animate={{ scale: isOn ? 1 : 0 }} 
-  exit={{ scale: 0 }} 
-  transition={{ type: 'spring', stiffness: 300, damping: 20 }}
- 
->
-</motion.div>
+      <motion.div
+        className={`absolute w-6 h-6 bg-red-500 rounded-full right-[110px]  cursor-pointer`}
+        onClick={() => setIsOn(false)}
+        initial={{ scale: 0 }}
+        animate={{ scale: isOn ? 1 : 0 }}
+        exit={{ scale: 0 }}
+        transition={{ type: "spring", stiffness: 300, damping: 20 }}
+      ></motion.div>
       <motion.button
         animate={{
           width: isOn ? "96px" : "56px",
@@ -243,8 +240,8 @@ function Join() {
           borderRadius: isOn ? "15px" : "none",
           textAlign: isOn ? "center" : "start",
           background: isOn
-            ? "linear-gradient(135deg, #6c7f95, #e0e0e0)"
-            : "linear-gradient(to left, #6c7f95, white)",
+            ? "linear-gradient(-45deg, #1e1e1e, #4b4b4b)"
+            : "linear-gradient(-45deg, #1e1e1e, #4b4b4b)",
         }}
         transition={{
           type: "spring",
@@ -258,7 +255,6 @@ function Join() {
           animate={{
             x: isOn ? 0 : -20,
             scale: isOn ? 1.6 : 1,
-            color: isOn ? "white" : "black",
             opacity: isOn ? 1 : 0.6,
           }}
           transition={{
@@ -274,3 +270,4 @@ function Join() {
 }
 
 export { Join };
+
